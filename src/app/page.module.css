@@ -7,6 +7,10 @@
   min-height: 100vh;
 }
 
+.main div {
+  margin: 2rem 0;
+}
+
 .description {
   display: inherit;
   justify-content: inherit;
@@ -44,6 +48,48 @@
   grid-template-columns: repeat(4, minmax(25%, auto));
   max-width: 100%;
   width: var(--max-width);
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.2rem;
+  border-radius: var(--border-radius);
+  background: rgba(var(--card-rgb), 0);
+  border: 1px solid rgba(var(--card-border-rgb), 0);
+  transition: background 200ms, border 200ms;
+}
+
+.login label {
+  margin-top: 1rem;
+}
+
+.connectionCard {
+  max-width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.2rem;
+  border-radius: var(--border-radius);
+  background: rgba(var(--card-rgb), 0);
+  border: 1px solid gray;
+  transition: background 200ms, border 200ms;
+}
+.connectionCard div {
+  display: flex;
+  flex-direction: column;
+}
+.online {
+  color: green;
+}
+.away {
+  color: yellow;
+}
+.offline {
+  color: red;
+}
+.connectCardImage {
+  margin-right: 1rem;
+  border-radius: 5px;
 }
 
 .card {
@@ -109,7 +155,7 @@
 }
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
-  .card:hover {
+  .card:hover, .login:hover {
     background: rgba(var(--card-rgb), 0.1);
     border: 1px solid rgba(var(--card-border-rgb), 0.15);
   }

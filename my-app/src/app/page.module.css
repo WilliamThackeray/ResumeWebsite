@@ -155,6 +155,7 @@
 .main {
   /* padding-left: 2rem; */
   background-color: var(--tan);
+  color: var(--dark);
 }
 
 .footerSocialLinks {
@@ -166,6 +167,32 @@
   font-size: 1.3rem;
 }
 
+.link {
+  font-size: 1.75rem;
+}
+
+.aboutPage {
+  background-color: var(--tan);
+  color: var(--dark);
+  padding: 0 2rem;
+}
+.aboutPage h1 {
+  padding: 1rem;
+}
+
+.aboutSections {
+  display: flex;
+}
+.aboutSections h3 {
+  padding: 0.8rem;
+}
+.aboutSections p {
+  padding: 0 0.8rem 0.8rem 0.8rem;
+}
+.aboutSections img {
+  border: 5px solid var(--orange);
+  border-radius: 70px;
+}
 
 .description {
   display: inherit;

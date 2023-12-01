@@ -5,7 +5,6 @@ import Header from './components/header'
 import Footer from './components/footer'
 import Link from 'next/link'
 
-
 export default function NotFound() {
   const image404 = pickImage()
   
@@ -14,7 +13,7 @@ export default function NotFound() {
   }
 
   return (
-    <>
+    <main>
       <Header />
       <div className={styles.notFound}>
         <h1>Error 404</h1>
@@ -26,6 +25,6 @@ export default function NotFound() {
         <Link href='/'>Back to Home</Link>
       </div>
       <Footer />
-    </>
+    </main>
   )
 }

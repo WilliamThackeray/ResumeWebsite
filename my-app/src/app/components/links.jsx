@@ -12,21 +12,24 @@ export default function Links() {
   return (
     <>
       <Link 
-        className={`link ${pathname === '/' ? 'active' : ''}`}
+        className={styles.link}
         href="/">
         Home
       </Link>
       <Link
+        className={styles.link}
         href="/about"
       >
         About
       </Link>
       <Link
+        className={styles.link}
         href="/resume"
       >
         Resume
       </Link>
       <Link
+        className={styles.link}
         href="/projects"
       >
         Projects

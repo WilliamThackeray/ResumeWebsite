@@ -3,6 +3,7 @@ import images404 from './data/images404.js'
 import Image from 'next/image'
 import Header from './components/header'
 import Footer from './components/footer'
+import Link from 'next/link'
 
 
 export default function NotFound() {
@@ -22,6 +23,7 @@ export default function NotFound() {
         <p>
           {image404.desc}
         </p>
+        <Link href='/'>Back to Home</Link>
       </div>
       <Footer />
     </>

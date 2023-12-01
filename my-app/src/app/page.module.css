@@ -208,6 +208,13 @@
 .notFound h2, .notFound p {
   padding: 1rem 0;
 }
+.notFound a {
+  font-size: 2rem;
+}
+.notFound a:hover {
+  color: var(--black);
+  text-shadow: 1px 1px 30px var(--black);
+}
 
 .code {
   font-weight: 700;

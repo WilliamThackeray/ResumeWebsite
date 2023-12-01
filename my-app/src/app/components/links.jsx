@@ -2,6 +2,8 @@
  
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import styles from '../page.module.css'
+
  
 export default function Links() {
   const pathname = usePathname()
@@ -10,6 +12,7 @@ export default function Links() {
   return (
     <>
       <Link 
+        className={`link ${pathname === '/' ? 'active' : ''}`}
         href="/">
         Home
       </Link>

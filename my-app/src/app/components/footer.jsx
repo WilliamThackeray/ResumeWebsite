@@ -13,7 +13,12 @@ export default function Footer() {
   return (
     <section className={styles.footer}>
       <div>
-        &copy; William Thackeray 2023
+        <ul>
+          <li>
+            &copy; William Thackeray 2023
+          </li>
+          <li><Link href='/login'>Admin Login</Link></li>
+        </ul>
       </div>
       <div className={styles.footerSocialLinks}>
         <Link href='https://github.com/WilliamThackeray' target='_blank'><FontAwesomeIcon className={styles.footerSocialLink} icon={faGithubSquare} /></Link>

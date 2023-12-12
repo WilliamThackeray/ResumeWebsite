@@ -1,4 +1,5 @@
-'use client'
+    // 'use server'
+    'use client'
 
 import Image from 'next/image'
 import Link from 'next/link'
@@ -6,10 +7,67 @@ import { usePathname } from 'next/navigation'
 import styles from './page.module.css'
 import Header from './Components/header'
 import Footer from './Components/footer'
-import { getApi } from './Server/api'
+import Project from './Components/project'
+import ContactForm from './Components/contactForm'
+import { getApi } from './api/api'
+import chalk from 'chalk'
 
+// async function getProjects() {
+//   const model = getApi(process.env.TURSO_URL, process.env.TURSO_AUTH)
+//   let projs = await model.list('projects')
+//   return projs
+// }
 
-export default function Page() {
+export default async function Page() {
+  // const projects = await getProjects()
+  // const projects = projs
+  // var smtpTransport = NodeMailer.createTransport({
+  //   host: process.env.SMTP_SERVER,
+  //   secureConnection: true,
+  //   port: process.env.SMTP_PORT,
+  //   secure: false,
+  //   auth: {
+  //     user: process.env.SMTP_LOGIN,
+  //     pass: process.env.SMTP_PASSWORD
+  //   },
+    // tls:{
+    //     secureProtocol: "TLSv1_method"
+    // }
+  // });
+  // verify connection configuration
+  // smtpTransport.verify(function (error, success) {
+  //   if (error) {
+  //     console.log(error);
+  //   } else {
+  //     console.log("Server is ready to take our messages");
+  //   }
+  // });
+
+  // async function sendMail() {
+  //   // get form values
+  //   let name = document.querySelector('#name')
+  //   let email = document.querySelector('#email')
+  //   let msg = document.querySelector('#message')
+
+  //   // put form values into a message object
+  //   let message = {
+  //     subject: `Resume Website: ${name}`,
+  //     to: 'will_thack@comcast.net',
+  //     from: email,
+  //     text: msg
+  //   }
+  //   console.log(chalk.yellow('Message Object: ', message))
+
+  //   // send message object
+  //   smtpTransport.sendMail(message, (err, success) => {
+  //     if (err) {
+  //       console.log(chalk.red(err))
+  //     } else {
+  //       console.log(chalk.green.bold('Email sent successfully.'))
+  //     }
+  //   })
+
+  // }
   return (
     <main>
       <Header />
@@ -29,7 +87,7 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className={styles.projSec}>
+        {/* <section className={styles.projSec}>
           <h2>My Recent Projects</h2>
           <div className={styles.projCard}>
             <Image
@@ -43,21 +101,13 @@ export default function Page() {
               <p>A word counter I made to count the frequency of specified words in a given text.</p>
             </div>
           </div>
-        </section>
+        </section> */}
         <section className={styles.resSec}>
           <h2><Link href="/resume">Resume</Link></h2>
         </section>
         <section className={styles.contactSec}>
-          <h2>Contact Me</h2>
-          <form>
-            <label htmlFor="name">Name: <input type="text" /></label>
-            <label htmlFor="email">Email: <input type="email" /></label>
-            <div>
-              <label htmlFor="message">Message:</label>
-              <textarea name="message" id="message" cols="30" rows="10"></textarea>
-            </div>
-            <input type="submit" value="send" />
-          </form>
+          <h2>Connect with me!</h2>
+          <ContactForm  />
         </section>
         <Footer />
       </div>

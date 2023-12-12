@@ -7,12 +7,16 @@ export default class DataBaseApi {
   constructor (host, url, auth) {
     console.log(chalk.bgCyan.italic('  DataBaseApi constructor()  '))
     this.host = host
-    this.client = createClient({
-      // url: `${url}`,
-      url: `${url}`,
-      // authToken: `${auth}`,
-      authToken: `${auth}`
-    })
+    try {
+      this.client = createClient({
+        // url: `${url}`,
+        url: `${url}`,
+        // authToken: `${auth}`,
+        authToken: `${auth}`
+      })
+    } catch(err) {
+      console.log(chalk.red(err))
+    }
     // might need to await createClient() 
     // can you await in a constructor?
   }

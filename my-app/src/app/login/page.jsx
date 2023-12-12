@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 import styles from '../page.module.css'
 import Header from '../Components/header'
 import Footer from '../Components/footer'
-import checkLogin from '@/app/Server/server1'
+import checkLogin from '@/app/Api/server1'
 import { useState } from 'react'
 
 export default function Page() {

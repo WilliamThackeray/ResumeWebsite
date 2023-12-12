@@ -74,14 +74,19 @@
 
 .resSec {
   display: flex;
-  color: var(--black);
+  color: var(--tan);
+  background-color: var(--blue);
   align-items: center;
   justify-content: center;  
   min-height: 40vh;
   font-size:x-large;
+  border-top: 2px solid var(--dark);
 }
 .resSec h2 {
   font-weight: 400;
+}
+.resSec h2:hover {
+  color: var(--orange)
 }
 
 .contactSec {
@@ -122,7 +127,7 @@
   display: flex;
   /* flex-direction: ; */
 }
-.contactSec input[type="submit"] {
+.contactSec input[type="button"] {
   background-color: var(--orange);
   color: var(--dark);
   padding: 1rem 2rem;
@@ -139,6 +144,55 @@
   color: var(--black);
   border: 3px solid var(--dark);
   border-radius: 10px;
+  width: 100%;
+}
+#sendMailBtn {
+  cursor: pointer;
+}
+
+.resumeBody {
+  color: var(--dark);
+  width: 100%;
+
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* justify-content: end; */
+}
+
+.leftSection {
+  padding: 2rem;
+}
+.leftSection div {
+  padding-top: 1rem;
+}
+.leftSection div:hover {
+  background-color: var(--tan);
+}
+.leftSection h2 {
+  border-bottom: 1px var(--dark) solid;
+}
+.leftSection ul {
+  list-style-type: none;
+}
+.leftSection li {
+  padding-top: 1rem;
+}
+.langFrameDB {
+  display: flex;
+  flex-direction: row;
+}
+.langFrameDB div {
+  margin-right: 1rem;
+}
+.langFrameDB div:last-child {
+  margin-right: 0;
+}
+
+
+.rightSection {
+  padding: 2rem;
 }
 
 .footer {
@@ -250,6 +304,9 @@
 }
 .projectLink:hover {
   color: var(--orange);
+}
+.projh1 {
+  margin: 0.5rem 3rem;
 }
 
 .description {

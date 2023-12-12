@@ -5,9 +5,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import styles from '../page.module.css'
-import Header from '../components/header'
-import Footer from '../components/footer'
-import checkLogin from '@/server/server'
+import Header from '../Components/header'
+import Footer from '../Components/footer'
+import checkLogin from '@/app/Server/server1'
 import { useState } from 'react'
 
 export default function Page() {

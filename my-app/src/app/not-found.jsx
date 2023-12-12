@@ -1,8 +1,8 @@
 import styles from './page.module.css'
-import images404 from './data/images404.js'
+import images404 from './Data/images404.js'
 import Image from 'next/image'
-import Header from './components/header'
-import Footer from './components/footer'
+import Header from './Components/header'
+import Footer from './Components/footer'
 import Link from 'next/link'
 
 export default function NotFound() {

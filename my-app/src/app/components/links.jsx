@@ -7,7 +7,7 @@ import styles from '../page.module.css'
  
 export default function Links() {
   const pathname = usePathname()
-  console.log(pathname)
+  console.log('pathname: ', pathname)
  
   return (
     <>
@@ -18,19 +18,19 @@ export default function Links() {
       </Link>
       <Link
         className={styles.link}
-        href="/about"
+        href="/About"
       >
         About
       </Link>
       <Link
         className={styles.link}
-        href="/resume"
+        href="/Resume"
       >
         Resume
       </Link>
       <Link
         className={styles.link}
-        href="/projects"
+        href="/Projects"
       >
         Projects
       </Link>

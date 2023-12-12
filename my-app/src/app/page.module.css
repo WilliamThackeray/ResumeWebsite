@@ -222,6 +222,36 @@
   border-radius: 70px;
 }
 
+.projects {
+  color: var(--dark);
+}
+.projectsDiv {
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem 3rem;
+
+  background-color: var(--blue);
+
+  border: solid var(--dark) 3px;
+  border-radius: 10px;
+}
+.projectsDiv img {
+  border-radius: 6px;
+  border: solid 2px var(--dark);
+}
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem
+}
+.projectLink  {
+  color: var(--dark);
+  font-size: 1.5rem;
+}
+.projectLink:hover {
+  color: var(--orange);
+}
+
 .description {
   display: inherit;
   justify-content: inherit;

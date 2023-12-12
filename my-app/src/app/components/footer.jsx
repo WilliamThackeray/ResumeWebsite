@@ -17,7 +17,6 @@ export default function Footer() {
           <li>
             &copy; William Thackeray 2023
           </li>
-          <li><Link href='/login'>Admin Login</Link></li>
         </ul>
       </div>
       <div className={styles.footerSocialLinks}>

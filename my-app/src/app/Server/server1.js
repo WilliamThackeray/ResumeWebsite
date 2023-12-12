@@ -5,12 +5,16 @@ import chalk from 'chalk'
 
 // DATABASE SETUP
 
-import { createClient } from "@libsql/client";
+import { createClient } from "@libsql/client/web";
+
+console.log(chalk.yellow('URL: ', process.env.TURSO_URL))
 
 const client = createClient({
-  url: `${process.env.TURSO_URL}`,
-  authToken: `${process.env.TURSO_AUTH}`
+  url: `libsql://resume-williamthackeray.turso.io`,
+  authToken: `eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJpYXQiOiIyMDIzLTEyLTA4VDE5OjUxOjE3LjU1MDI4Mzg2WiIsImlkIjoiYmE0ZjY4NWItOTYwMC0xMWVlLTlmNDctMWFmN2QwZmE4ZTBiIn0.aSO1kPHz9SFPnOYgo_17CfF2LrMV8jF2vuqMPon3LFOlfLYMxwGhX-lwqx5S3HuJLxCWNuborVJNasG8_A-aCg`
 })
+console.log(chalk.red(JSON.stringify(client)))
+
 
 
 // DATABASE CRUD
@@ -38,12 +42,12 @@ const projects = [
   //   description: `Biñho is a finger soccer tabletop game. I made this site for a project during the Fall sememster of 2022. The site implements what would be a league for Biñho and has the ability to add future teams and data for those teams. `,
   //   url: `https://genuine-croquembouche-add040.netlify.app/`
   // },
-  {
-    name: `Sorianos Sweets`,
-    img_name: `sorianos_sweets.jpeg`,
-    description: `Soriano's Sweets is a website advertising the cookies that a coworker sells. It's a simple single page site but one she can use to share with others in which they can reach out to her and order cookies.`,
-    url: `https://exquisite-gingersnap-05c180.netlify.app/#about`
-  }
+  // {
+  //   name: `Sorianos Sweets`,
+  //   img_name: `sorianos_sweets.jpeg`,
+  //   description: `Soriano's Sweets is a website advertising the cookies that a coworker sells. It's a simple single page site but one she can use to share with others in which they can reach out to her and order cookies.`,
+  //   url: `https://exquisite-gingersnap-05c180.netlify.app/#about`
+  // }
 ]
 
 // addProject(projects)
@@ -63,12 +67,14 @@ async function addProject(projects) {
   }
 }
 
-async function getProjects() {
+console.log(chalk.yellow(JSON.stringify(await getProjects())))
+export async function getProjects() {
   const res = await client.execute('select * from projects')
+  return res.rows
 }
 
 // LOGIN 
-import Bun from 'bun'
+// import Bun from 'bun'
 const salt = 10
 
 async function addUser(user) { // will only be used to add the admin login user
